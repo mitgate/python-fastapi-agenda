@@ -34,15 +34,15 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
     - `errors.py`: modelos de erro. Eles são referenciados nas classes Exception definidas em `exceptions.py`.
 <br />    
 
-- `database.py`: inicialização do cliente MongoDB. Na verdade, é muito curto, pois o Mongo/pymongo não requer pré-conexão ao Mongo ou configuração do banco de dados/coleção, mas com outros bancos de dados (como SQL-like usando SQLAlchemy) isso pode ficar mais complexo.
+- `database.py`: inicialização do cliente MongoDB.
 
-- `exceptions.py`: exceções personalizadas, que podem ser traduzidas para respostas JSON que a API pode retornar aos clientes (principalmente se uma Pessoa não existir ou já existir).
+- `exceptions.py`: exceções personalizadas, que podem ser traduzidas para respostas JSON que a API pode retornar (principalmente se uma Pessoa não existir ou já existir).
 
 - `repositories.py`: métodos que interagem com a base de dados Mongo para ler ou escrever dados de Pessoa. 
 
-- `exceptions.py`: exceções personalizadas levantadas durante o processamento da solicitação. Eles têm um modelo de erro associado, então a documentação do OpenAPI pode mostrar os modelos de erro.
+- `exceptions.py`: exceções personalizadas levantadas durante o processamento da solicitação. Eles têm um modelo de erro associado, então a documentação do OpenAPI pode mostrar os modelos de erro depois.
 
-- `settings.py`: carregamento das configurações da aplicação através de variáveis ​​de ambiente ou arquivo dotenv, usando as classes BaseSettings do Pydantic.
+- `settings.py`: carregamento das configurações da aplicação através de variáveis de ambiente ou arquivo dotenv, usando as classes BaseSettings do Pydantic.
 
 - `utils.py`: funções auxiliares diversas.
 
