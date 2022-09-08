@@ -1,11 +1,11 @@
 # FastAPI + MongoDB API REST - Agenda de Pessoas e seus contatos
 <br/>
 
-![#1589F0](https://via.placeholder.com/15/1589F0/1589F0.png) ## Agenda de Contatos
+# Agenda de Contatos
 
 - Exemplo de API usando FastAPI, Pydantic e configurações, Mongo database - non-async.
 
-= O código destina-se a criar toda a documentação OpenAPI com o máximo de detalhes, incluindo modelos completos e detalhados para solicitações, respostas e erros.
+- O código destina-se a criar toda a documentação OpenAPI com o máximo de detalhes, incluindo modelos completos e detalhados para solicitações, respostas e erros.
 
 
 ## END POINTS
