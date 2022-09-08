@@ -29,7 +29,7 @@ parar-teste-mongo: ## Parar o mongodb no docker de teste
 	docker stop fastapi_mongodb_teste
 
 clean: ## Efetua limpeza de temporarios.
-	rm -rf ./.pytest_cache ; rm -rf ./.hypothesis ; rm -rf __pycache__ ; rm -rf ./testes/__pycache__ ; rm -rf ./agenda_api/__pycache__
+	rm -rf ./.pytest_cache ; rm -rf ./.hypothesis ; rm -rf __pycache__ ; rm -rf ./testes/__pycache__ ; rm -rf ./agenda_api/__pycache__ ; rm -rf ./agenda_api/models/__pycache__ ; rm -rf ./agenda_api/__init__.pyc
 
 help: ## Exibir ajuda.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
