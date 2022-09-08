@@ -25,9 +25,9 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
 <br />
 
 - `models`: definição de todas as classes de modelos. Como estamos usando o MongoDB, podemos usar o mesmo esquema JSON para solicitação/resposta de API e armazenamento. Utilizando classes diferentes, dependendo do contexto:
-    - `pessoa_update.py`: modelo utilizado como corpo da requisição PATCH. Inclui todos os campos que podem ser atualizados, definidos como opcionais.<br />
+    - `pessoa_update.py`: modelo utilizado como corpo da requisição PATCH. Inclui todos os campos de contato que podem ser atualizados.<br />
     - `pessoa_create.py`: modelo utilizado como corpo da requisição POST. Inclui todos os campos do modelo Update, mas todos os campos obrigatórios em Create devem ser declarados novamente (no tipo e no valor do campo).
-    - `pessoa_read.py`: modelo utilizado como corpo de resposta GET e POST. Inclui todos os campos do modelo Create, mais o pessoa_id (que vem do campo _id no documento Mongo) e a idade (calculada a partir da data de nascimento, se houver).
+    - `pessoa_read.py`: modelo utilizado como corpo de resposta GET e POST. Inclui todos os campos do modelo Create, mais o pessoa_id (que vem do campo _id no documento Mongo) .
     - `pessoa_contatos.py`: parte do modelo Pessoa, atributo contatos.
     - `common.py`: definição do BaseModel comum, do qual todas as classes do modelo herdam, direta ou indiretamente.
     - `fields.py`: definição dos Campos, que são os valores dos atributos dos modelos. Seu principal objetivo é completar a documentação do OpenAPI fornecendo uma descrição e exemplos. Os campos são declarados fora das classes devido à re-declaração necessária entre os modelos Update e Create.
