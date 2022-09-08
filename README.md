@@ -21,9 +21,10 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
 ## Estrutura do projeto (módulos)
 
 - `app.py`: inicialização do FastAPI e de todas as rotas utilizadas pela API. Em APIs com mais endpoints e entidades diferentes, seria melhor dividir as rotas em módulos diferentes por seu contexto ou entidade.
-<br/>
+<br />
+
 - `models`: definição de todas as classes de modelos. Como estamos usando o MongoDB, podemos usar o mesmo esquema JSON para solicitação/resposta de API e armazenamento. No entanto, são necessárias classes diferentes para a mesma entidade, dependendo do contexto:
-    - `pessoa_update.py`: modelo utilizado como corpo da requisição PATCH. Inclui todos os campos que podem ser atualizados, definidos como opcionais.
+    - `pessoa_update.py`: modelo utilizado como corpo da requisição PATCH. Inclui todos os campos que podem ser atualizados, definidos como opcionais.<br />
     - `pessoa_create.py`: modelo utilizado como corpo da requisição POST. Inclui todos os campos do modelo Update, mas todos os campos obrigatórios em Create devem ser declarados novamente (no tipo e no valor do campo).
     - `pessoa_read.py`: modelo utilizado como corpo de resposta GET e POST. Inclui todos os campos do modelo Create, mais o pessoa_id (que vem do campo _id no documento Mongo) e a idade (calculada a partir da data de nascimento, se houver).
     - `pessoa_contatos.py`: parte do modelo Pessoa, atributo contatos.
