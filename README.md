@@ -5,7 +5,7 @@
 
 - Exemplo de API usando FastAPI, Pydantic e configurações, Mongo database - non-async.
 
-- O código destina-se a criar toda a documentação OpenAPI com o máximo de detalhes, incluindo modelos completos e detalhados para solicitações, respostas e erros.
+- O código destina-se a criar toda a documentação API com o máximo de detalhes, incluindo modelos completos e detalhados para solicitações, respostas e erros.
 
 
 ## END POINTS
