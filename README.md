@@ -46,7 +46,7 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
 
 - `utils.py`: funções auxiliares diversas.
 
-- `tests`: testes de aceitação e integração, executados diretamente nos endpoints da API e banco de dados Mongo real.
+- `testes`: pasta com testes de aceitação e integração, executados diretamente nos endpoints da API e banco de dados Mongo real.
 
 ## Requisitos
 
