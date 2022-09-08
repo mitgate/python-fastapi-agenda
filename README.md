@@ -10,7 +10,7 @@
 
 ## END POINTS
 
-Os endpoints definem todas as operações CRUD que podem ser realizadas nas entidades Pessoa:
+Os endpoints definem todas as operações CRUD que podem ser realizadas nas entidades ca classe Pessoa:
 
 - GET `/docs` - Documentação OpenAPI (gerada automaticamente por FastAPI)
 - GET `/pessoas` - Listar pessoas cadastradas com contatos
