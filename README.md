@@ -31,27 +31,27 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
     - `common.py`: definição do BaseModel comum, do qual todas as classes do modelo herdam, direta ou indiretamente.
     - `fields.py`: definição dos Campos, que são os valores dos atributos dos modelos. Seu principal objetivo é completar a documentação do OpenAPI fornecendo uma descrição e exemplos. Os campos são declarados fora das classes devido à re-declaração necessária entre os modelos Update e Create.
     - `errors.py`: modelos de erro. Eles são referenciados nas classes Exception definidas em `exceptions.py`.
-<br/>    
+<br />    
 - `database.py`: inicialização do cliente MongoDB. Na verdade, é muito curto, pois o Mongo/pymongo não requer pré-conexão ao Mongo ou configuração do banco de dados/coleção, mas com outros bancos de dados (como SQL-like usando SQLAlchemy) isso pode ficar mais complexo.
-<br/>
+<br />
 - `exceptions.py`: exceções personalizadas, que podem ser traduzidas para respostas JSON que a API pode retornar aos clientes (principalmente se uma Pessoa não existir ou já existir).
-<br/>
+<br />
 - `middlewares.py`: o middleware do Request Handler captura as exceções levantadas durante o processamento de solicitações e tenta traduzi-las em respostas dadas aos clientes.
-<br/>
+<br />
 - `repositories.py`: métodos que interagem com a base de dados Mongo para ler ou escrever dados de Pessoa. 
-<br/>
+<br />
 - `exceptions.py`: exceções personalizadas levantadas durante o processamento da solicitação. Eles têm um modelo de erro associado, então a documentação do OpenAPI pode mostrar os modelos de erro.
-<br/>
+<br />
 - `settings.py`: carregamento das configurações da aplicação através de variáveis ​​de ambiente ou arquivo dotenv, usando as classes BaseSettings do Pydantic.
 <br/>
 - `utils.py`: funções auxiliares diversas.
-<br/>
+<br />
 - `tests`: testes de aceitação+integração, executados diretamente nos endpoints da API e banco de dados Mongo real.
 
 ## Requisitos
 
 - Python >= 3.10
-- Requirements.txt)[requirements.txt](requirements.txt)
+- Requirements.txt[requirements.txt](requirements.txt)
 - Servidor MongoDB rodando
 - Docker (Opcional)
 
