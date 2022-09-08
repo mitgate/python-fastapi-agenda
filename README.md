@@ -32,11 +32,13 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
     - `fields.py`: definição dos Campos, que são os valores dos atributos dos modelos. Seu principal objetivo é completar a documentação do OpenAPI fornecendo uma descrição e exemplos. Os campos são declarados fora das classes devido à re-declaração necessária entre os modelos Update e Create.
     - `errors.py`: modelos de erro. Eles são referenciados nas classes Exception definidas em `exceptions.py`.
 <br />    
+
 - `database.py`: inicialização do cliente MongoDB. Na verdade, é muito curto, pois o Mongo/pymongo não requer pré-conexão ao Mongo ou configuração do banco de dados/coleção, mas com outros bancos de dados (como SQL-like usando SQLAlchemy) isso pode ficar mais complexo.
 <br />
 - `exceptions.py`: exceções personalizadas, que podem ser traduzidas para respostas JSON que a API pode retornar aos clientes (principalmente se uma Pessoa não existir ou já existir).
 <br />
 - `middlewares.py`: o middleware do Request Handler captura as exceções levantadas durante o processamento de solicitações e tenta traduzi-las em respostas dadas aos clientes.
+- 
 <br />
 - `repositories.py`: métodos que interagem com a base de dados Mongo para ler ou escrever dados de Pessoa. 
 <br />
