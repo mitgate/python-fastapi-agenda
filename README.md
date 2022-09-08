@@ -40,7 +40,7 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
 
 - `repositories.py`: métodos que interagem com a base de dados Mongo para ler ou escrever dados de Pessoa. 
 
-- `exceptions.py`: exceções personalizadas levantadas durante o processamento da solicitação. Eles têm um modelo de erro associado, então a documentação do OpenAPI pode mostrar os modelos de erro depois.
+- `exceptions.py`: exceções personalizadas levantadas durante o processamento da solicitação. Eles têm um modelo de erro associado, então a documentação na API pode mostrar os modelos de erro depois.
 
 - `settings.py`: carregamento das configurações da aplicação através de variáveis de ambiente ou arquivo dotenv, usando as classes BaseSettings do Pydantic.
 
