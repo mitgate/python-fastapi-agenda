@@ -66,7 +66,7 @@ instalar-dependencias-teste: ## Instalar dependencias dos testes
 
 test: ## Executar testes
 
-run: ## python run app
+run: ## Executar App
 
 run-docker: ## Executar no docker-compose
 
