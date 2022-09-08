@@ -37,18 +37,15 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
 
 - `exceptions.py`: exceções personalizadas, que podem ser traduzidas para respostas JSON que a API pode retornar aos clientes (principalmente se uma Pessoa não existir ou já existir).
 
-- `middlewares.py`: o middleware do Request Handler captura as exceções levantadas durante o processamento de solicitações e tenta traduzi-las em respostas dadas aos clientes.
-- 
-<br />
 - `repositories.py`: métodos que interagem com a base de dados Mongo para ler ou escrever dados de Pessoa. 
-<br />
+
 - `exceptions.py`: exceções personalizadas levantadas durante o processamento da solicitação. Eles têm um modelo de erro associado, então a documentação do OpenAPI pode mostrar os modelos de erro.
-<br />
+
 - `settings.py`: carregamento das configurações da aplicação através de variáveis ​​de ambiente ou arquivo dotenv, usando as classes BaseSettings do Pydantic.
-<br/>
+
 - `utils.py`: funções auxiliares diversas.
-<br />
-- `tests`: testes de aceitação+integração, executados diretamente nos endpoints da API e banco de dados Mongo real.
+
+- `tests`: testes de aceitação e integração, executados diretamente nos endpoints da API e banco de dados Mongo real.
 
 ## Requisitos
 
