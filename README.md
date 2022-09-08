@@ -12,10 +12,10 @@
 Os endpoints definem todas as operações CRUD que podem ser realizadas nas entidades Pessoa:
 
 - GET `/docs` - Documentação OpenAPI (gerada automaticamente por FastAPI)
-- GET `/pessoas` - Listar pessoas cadastradas
-- GET `/pessoas/{pessoa_id}` - Ler pessoa por sua ID
-- POST `/pessoas` - Criar nova pessoa'
-- PATCH `/pessoas/{pessoa_id}` - Atualizar pessoa
+- GET `/pessoas` - Listar pessoas cadastradas com contatos
+- GET `/pessoas/{pessoa_id}` - Ler pessoa e contatos por sua ID
+- POST `/pessoas` - Criar nova pessoa e contatos
+- PATCH `/pessoas/{pessoa_id}` - Atualizar pessoa e contatos
 - DELETE `/pessoas/{pessoa_id}` - Excluir pessoa existente
 
 ## Estrutura do projeto (módulos)
