@@ -34,9 +34,9 @@ Os endpoints definem todas as operações CRUD que podem ser realizadas nas enti
 <br />    
 
 - `database.py`: inicialização do cliente MongoDB. Na verdade, é muito curto, pois o Mongo/pymongo não requer pré-conexão ao Mongo ou configuração do banco de dados/coleção, mas com outros bancos de dados (como SQL-like usando SQLAlchemy) isso pode ficar mais complexo.
-<br />
+
 - `exceptions.py`: exceções personalizadas, que podem ser traduzidas para respostas JSON que a API pode retornar aos clientes (principalmente se uma Pessoa não existir ou já existir).
-<br />
+
 - `middlewares.py`: o middleware do Request Handler captura as exceções levantadas durante o processamento de solicitações e tenta traduzi-las em respostas dadas aos clientes.
 - 
 <br />
