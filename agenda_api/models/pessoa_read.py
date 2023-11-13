@@ -25,8 +25,7 @@ class PessoaRead(PessoaCreate):
     def _set_pessoa_id(cls, data):
         """altera o campo _id para pessoa_id 
         e o a alias para "pessoa_id"  """
-        document_id = data.get("_id")
-        if document_id:
+        if document_id := data.get("_id"):
             data["pessoa_id"] = document_id
         return data
 

@@ -14,10 +14,10 @@ class PessoasRepository:
     @staticmethod
     def get(pessoa_id: str) -> PessoaRead:
         """Get pessoa por seu ID"""
-        document = collection.find_one({"_id": pessoa_id})
-        if not document:
+        if document := collection.find_one({"_id": pessoa_id}):
+            return PessoaRead(**document)
+        else:
             raise PessoaNotFoundException(pessoa_id)
-        return PessoaRead(**document)
 
     @staticmethod
     def list() -> PessoasRead:
